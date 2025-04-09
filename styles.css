@@ -1,0 +1,252 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1f1f1f;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, p {
+    margin-bottom: 20px;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header Section */
+header {
+    background: #181818;
+    color: #f3a847;
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background: #f3a847;
+    color: #181818;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e0852f;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 20px;
+    background: #282828;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.feature-item {
+    text-align: center;
+    width: 30%;
+    min-width: 250px;
+    background: #383838;
+    padding: 40px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #f3a847;
+}
+
+.feature-item p {
+    color: #aaa;
+    font-size: 1rem;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    padding: 80px 20px;
+    background: #333;
+    position: relative;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #f3a847;
+}
+
+/* Gallery Container: Use flexbox to align items horizontally */
+.gallery-container {
+    display: flex;                /* Align items horizontally */
+    overflow-x: auto;             /* Allow horizontal scrolling */
+    gap: 20px;                    /* Add space between items */
+    scroll-behavior: smooth;      /* Smooth scrolling */
+    padding: 10px;                /* Padding for container */
+    justify-content: flex-start;  /* Align items to the left */
+    flex-wrap: nowrap;            /* Prevent items from wrapping */
+}
+
+.gallery-item {
+    flex-shrink: 0;               /* Prevent items from shrinking */
+    width: 250px;                 /* Set a fixed width for each item */
+    text-align: center;
+    background: #444;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;       /* Ensure padding doesn't affect width */
+}
+
+.gallery-item img {
+    width: 100%;                  /* Ensure image takes up full width of its container */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    image-rendering: pixelated;    /* Maintain pixelated image effect */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);        /* Slight zoom effect on hover */
+}
+
+/* Arrow Buttons */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 60px 20px;
+    background: #282828;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    color: #f3a847;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h4 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.faq-item p {
+    color: #aaa;
+}
+
+/* Footer Section */
+footer {
+    background: #181818;
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+}
+
+footer a {
+    color: #f3a847;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .gallery-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .faq-item {
+        text-align: center;
+    }
+}
+/* Gallery Container: Use flexbox to align items horizontally */
+.gallery-container {
+    display: flex;                /* Enable flexbox for horizontal layout */
+    overflow-x: hidden;             /* Enable horizontal scrolling if content overflows */
+    gap: 20px;                    /* Space between gallery items */
+    scroll-behavior: smooth;      /* Smooth scrolling */
+    padding: 10px;                /* Padding around the container */
+    justify-content: flex-start;  /* Align items to the left initially */
+    flex-wrap: nowrap;            /* Prevent items from wrapping to the next line */
+}
+
+.gallery-item {
+    flex-shrink: 0;               /* Prevent items from shrinking below their set width */
+    width: 250px;                 /* Set a fixed width for each item */
+    text-align: center;
+    background: #444;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;       /* Include padding and border in the element's total width and height */
+}
+
+.faq {
+    text-align: center;
+}
